@@ -1,0 +1,2 @@
+# Energieadaptive_Produktionsumgebung_Modelle
+Dieses GitHub-Repository bietet Beispielmodelle für eine energieadaptive Produktionsumgebung
