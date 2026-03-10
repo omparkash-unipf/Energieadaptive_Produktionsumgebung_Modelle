@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile SchemaVersion="3.0" FileName="Energieerzeugungskomponente.aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
+  <SuperiorStandardVersion>AutomationML 2.1</SuperiorStandardVersion>
+  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="6.4.3.1" LastWritingDateTime="2026-03-10T17:29:01.8577436+01:00" OriginProjectID="unspecified" OriginProjectTitle="unspecified" OriginRelease="6.4.3.1" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" />
+  <ExternalReference Path="EnergieadaptiveProduktion_BaseClassLib_AML_1.0.0.aml" Alias="BaseClassLib" />
+  <InstanceHierarchy Name="Demo_Energieerzeugungskomponente_Instanzhierarchie" ID="1a535c44-b2b7-43a3-91d2-14d540da1385">
+    <Version>1.0.0</Version>
+    <InternalElement Name="PV-Anlage" ID="d6930e8e-50c5-40e3-b299-90ad15f584f9" RefBaseSystemUnitPath="Demo_Energieerzeugungskomponente_SystemUnitClassLib/PV-Anlage">
+      <Attribute Name="gesamtErzeugteEnergie" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergieerzeugungsAnlage/gesamtErzeugteEnergie" Unit="kWh" />
+      <InternalElement Name="PV-ModuleA" ID="cb227335-3143-4e2a-9a0a-0eb8dec136bb" RefBaseSystemUnitPath="Demo_Energieerzeugungskomponente_SystemUnitClassLib/PV-Modul">
+        <Attribute Name="nennLeistungproPVPanel" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergieerzeugungskomponenteAttribute/nennLeistungproPVPanel" Unit="kWh" />
+        <Attribute Name="anzahlInstallierterPVPanels" AttributeDataType="xs:int" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergieerzeugungskomponenteAttribute/anzahlInstallierterPVPanels" />
+        <RoleRequirements RefBaseRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/Energieerzeuger" />
+      </InternalElement>
+      <InternalElement Name="PV-ModuleB" ID="7538ea0f-8580-4d43-bef9-f506c48aee4c" RefBaseSystemUnitPath="Demo_Energieerzeugungskomponente_SystemUnitClassLib/PV-Modul">
+        <Attribute Name="nennLeistungproPVPanel" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergieerzeugungskomponenteAttribute/nennLeistungproPVPanel" Unit="kWh" />
+        <Attribute Name="anzahlInstallierterPVPanels" AttributeDataType="xs:int" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergieerzeugungskomponenteAttribute/anzahlInstallierterPVPanels" />
+        <RoleRequirements RefBaseRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/Energieerzeuger" />
+      </InternalElement>
+      <InternalElement Name="PV-ModuleC" ID="61e3be72-b4f6-40c7-b063-4f14f4f7acbe" RefBaseSystemUnitPath="Demo_Energieerzeugungskomponente_SystemUnitClassLib/PV-Modul">
+        <Attribute Name="nennLeistungproPVPanel" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergieerzeugungskomponenteAttribute/nennLeistungproPVPanel" Unit="kWh" />
+        <Attribute Name="anzahlInstallierterPVPanels" AttributeDataType="xs:int" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergieerzeugungskomponenteAttribute/anzahlInstallierterPVPanels" />
+        <RoleRequirements RefBaseRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/Energieerzeuger" />
+      </InternalElement>
+      <RoleRequirements RefBaseRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/Energieerzeugungsanlage" />
+    </InternalElement>
+  </InstanceHierarchy>
+  <SystemUnitClassLib Name="Demo_Energieerzeugungskomponente_SystemUnitClassLib" ID="bb72a3dc-8229-48d9-bdcb-a31148d26030">
+    <Version>1.0.0</Version>
+    <SystemUnitClass Name="PV-Modul" ID="200bdfd9-47ee-4281-a3fd-47d8cfae6057">
+      <Version>1.0.0</Version>
+      <Attribute Name="nennLeistungproPVPanel" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergieerzeugungskomponenteAttribute/nennLeistungproPVPanel" Unit="kWh" />
+      <Attribute Name="anzahlInstallierterPVPanels" AttributeDataType="xs:int" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergieerzeugungskomponenteAttribute/anzahlInstallierterPVPanels" />
+      <SupportedRoleClass RefRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/Energieerzeuger" />
+    </SystemUnitClass>
+    <SystemUnitClass Name="PV-Anlage" ID="cb85ce0c-046a-40eb-8b2b-7cde8053b2e8">
+      <Version>1.0.0</Version>
+      <Attribute Name="gesamtErzeugteEnergie" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergieerzeugungsAnlage/gesamtErzeugteEnergie" Unit="kWh" />
+      <SupportedRoleClass RefRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/Energieerzeugungsanlage" />
+    </SystemUnitClass>
+  </SystemUnitClassLib>
+</CAEXFile>
