@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile SchemaVersion="3.0" FileName="Energiepreis.aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
+  <SuperiorStandardVersion>AutomationML 2.1</SuperiorStandardVersion>
+  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="6.4.3.1" LastWritingDateTime="2026-03-12T10:18:41.1964302+01:00" OriginProjectID="unspecified" OriginProjectTitle="unspecified" OriginRelease="6.4.3.1" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" />
+  <ExternalReference Path="EnergieadaptiveProduktion_BaseClassLib_AML_1.0.0.aml" Alias="BaseClassLib" />
+  <InstanceHierarchy Name="Energiepreis_Instanzhierarchie" ID="c6682548-3fe6-44b6-88b4-e35d535a1d44">
+    <Version>1.0.0</Version>
+    <InternalElement Name="Energieprofile" ID="5382f01c-4b65-4a13-8f33-8471fb1d5f5b">
+      <InternalElement Name="EnergiepreisProfil_01" ID="ebe2eb53-6533-4a48-af60-0efcb0234fbc" RefBaseSystemUnitPath="Demo_Energiepreis_SystemUnitClassLib/EnergiepreisProfil">
+        <Attribute Name="energiepreis" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergiepreisAttribute/energiepreis" Unit="€" />
+        <Attribute Name="zeitintervall" AttributeDataType="xs:duration" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergiepreisAttribute/zeitintervall" />
+        <RoleRequirements RefBaseRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/EnergiepreisInformation" />
+      </InternalElement>
+      <InternalElement Name="EnergiepreisProfil_02" ID="af2a87e1-0610-4850-a381-dd8f79c3b7d7" RefBaseSystemUnitPath="Demo_Energiepreis_SystemUnitClassLib/EnergiepreisProfil">
+        <Attribute Name="energiepreis" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergiepreisAttribute/energiepreis" Unit="€" />
+        <Attribute Name="zeitintervall" AttributeDataType="xs:duration" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergiepreisAttribute/zeitintervall" />
+        <RoleRequirements RefBaseRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/EnergiepreisInformation" />
+      </InternalElement>
+      <InternalElement Name="EnergiepreisProfil_03" ID="7898e91f-a76a-4d8b-8262-a6a8c7ad4bfa" RefBaseSystemUnitPath="Demo_Energiepreis_SystemUnitClassLib/EnergiepreisProfil">
+        <Attribute Name="energiepreis" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergiepreisAttribute/energiepreis" Unit="€" />
+        <Attribute Name="zeitintervall" AttributeDataType="xs:duration" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergiepreisAttribute/zeitintervall" />
+        <RoleRequirements RefBaseRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/EnergiepreisInformation" />
+      </InternalElement>
+    </InternalElement>
+  </InstanceHierarchy>
+  <SystemUnitClassLib Name="Demo_Energiepreis_SystemUnitClassLib" ID="d9c66955-8046-48da-a249-e4cb185ea82f">
+    <Version>1.0.0</Version>
+    <SystemUnitClass Name="EnergiepreisProfil" ID="df7e2182-992a-42fb-b71f-4c243b750f8e">
+      <Version>1.0.0</Version>
+      <Attribute Name="energiepreis" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergiepreisAttribute/energiepreis" Unit="€" />
+      <Attribute Name="zeitintervall" AttributeDataType="xs:duration" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/EnergiepreisAttribute/zeitintervall" />
+      <SupportedRoleClass RefRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/EnergiepreisInformation" />
+    </SystemUnitClass>
+  </SystemUnitClassLib>
+</CAEXFile>
