@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile SchemaVersion="3.0" FileName="Personal.aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
+  <SuperiorStandardVersion>AutomationML 2.1</SuperiorStandardVersion>
+  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="6.4.3.1" LastWritingDateTime="2026-03-11T23:43:02.47422+01:00" OriginProjectID="unspecified" OriginProjectTitle="unspecified" OriginRelease="6.4.3.1" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" />
+  <ExternalReference Path="EnergieadaptiveProduktion_BaseClassLib_AML_1.0.0.aml" Alias="BaseClassLib" />
+  <InstanceHierarchy Name="Personal_Instanzhierarchie" ID="a1468564-ddda-4598-b4f1-84184e95eda6">
+    <Version>1.0.0</Version>
+    <InternalElement Name="Mitarbeiter" ID="aee640db-71ed-472d-aadb-d96cf447e128">
+      <InternalElement Name="MitarbeiterA" ID="2b1ce743-d12d-44b3-9bbb-60e439464ba7" RefBaseSystemUnitPath="Demo_Personal_SystemUnitClassLib/Personal">
+        <Attribute Name="personalQualifikation" AttributeDataType="xs:string" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/personalQualifikation" />
+        <Attribute Name="grundGehaltproStunde" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/grundGehaltproStunde" Unit="€/Stunde" />
+        <Attribute Name="wochenendzuschlagProzent" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/wochenendzuschlagProzent" Unit="%" />
+        <Attribute Name="wochenendzuschlagsKosten" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/wochenendzuschlagsKosten" Unit="€" />
+        <RoleRequirements RefBaseRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/Arbeitskraft" />
+      </InternalElement>
+      <InternalElement Name="MitarbeiterB" ID="9b0dc329-9397-4270-90c5-96a3a1a7815f" RefBaseSystemUnitPath="Demo_Personal_SystemUnitClassLib/Personal">
+        <Attribute Name="personalQualifikation" AttributeDataType="xs:string" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/personalQualifikation" />
+        <Attribute Name="grundGehaltproStunde" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/grundGehaltproStunde" Unit="€/Stunde" />
+        <Attribute Name="wochenendzuschlagProzent" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/wochenendzuschlagProzent" Unit="%" />
+        <Attribute Name="wochenendzuschlagsKosten" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/wochenendzuschlagsKosten" Unit="€" />
+        <RoleRequirements RefBaseRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/Arbeitskraft" />
+      </InternalElement>
+      <InternalElement Name="MitarbeiterC" ID="99e0d52c-72ff-42c7-935e-df71ef901516" RefBaseSystemUnitPath="Demo_Personal_SystemUnitClassLib/Personal">
+        <Attribute Name="personalQualifikation" AttributeDataType="xs:string" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/personalQualifikation" />
+        <Attribute Name="grundGehaltproStunde" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/grundGehaltproStunde" Unit="€/Stunde" />
+        <Attribute Name="wochenendzuschlagProzent" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/wochenendzuschlagProzent" Unit="%" />
+        <Attribute Name="wochenendzuschlagsKosten" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/wochenendzuschlagsKosten" Unit="€" />
+        <RoleRequirements RefBaseRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/Arbeitskraft" />
+      </InternalElement>
+    </InternalElement>
+  </InstanceHierarchy>
+  <SystemUnitClassLib Name="Demo_Personal_SystemUnitClassLib" ID="371a4885-41d2-4f3e-b306-e33e59d24f62">
+    <Version>1.0.0</Version>
+    <SystemUnitClass Name="Personal" ID="943a3407-a61f-4a2a-8408-49426488e5ce">
+      <Version>1.0.0</Version>
+      <Attribute Name="personalQualifikation" AttributeDataType="xs:string" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/personalQualifikation" />
+      <Attribute Name="grundGehaltproStunde" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/grundGehaltproStunde" Unit="€/Stunde" />
+      <Attribute Name="wochenendzuschlagProzent" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/wochenendzuschlagProzent" Unit="%" />
+      <Attribute Name="wochenendzuschlagsKosten" AttributeDataType="xs:double" RefAttributeType="BaseClassLib@Demo_BaseUnits_AttributTypeLib/PersonalAttribute/wochenendzuschlagsKosten" Unit="€" />
+      <SupportedRoleClass RefRoleClassPath="BaseClassLib@Demo_BaseRoles_RoleClassLib/Arbeitskraft" />
+    </SystemUnitClass>
+  </SystemUnitClassLib>
+</CAEXFile>
