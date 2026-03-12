@@ -1,0 +1,31 @@
+package energieadaptiveProduktion
+
+-- Berechnung 1: Gesamtenergieverbrauch eines Fertigungsprozesses
+context Fertigungsprozesse
+def: gesamtEnergieverbrauchFertigungsprozess : Real =
+     self.FertigungsZeit * self.Ressourcen.maschineNennleistung
+
+
+-- Berechnung 2: Wochenendzuschlagskosten
+context Personal
+def: wochenendZuschlagKosten : Real =
+    self.grundGehaltproStunde *
+    (self.wochenendzuschlagProzent / 100) *
+    self.Ressourcen.anzahlQualifiziertesPersonal *
+    self.Fertigungsprozesse.FertigungsZeit
+
+
+-- Constraint 1: Energieverbrauch darf die erzeugte Energie nicht überschreiten
+context Fertigungsprozesse
+inv EnergieVerfuegbarkeit:
+    self.gesamtEnergieverbrauchFertigungsprozess <
+    self.PV-Anlage.gesamtErzeugteEnergie
+
+
+-- Constraint 2: Wochenendzuschlagskosten müssen kleiner als der Energiepreis sein
+context Personal
+inv KostenVergleich:
+    self.wochenendZuschlagKosten <
+    self.EnergiepreisProfil.energiepreis
+
+endpackage
